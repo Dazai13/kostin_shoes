@@ -366,6 +366,31 @@ a{
     align-items: center;
     padding: 40px 100px;
 }
+@media(max-width:1199px){
+    .privilages{
+        padding: 32px 0 0;
+    }
+    .privilages__title{
+        text-align: center;
+    }
+    .privilages__table-row .container{
+        padding: 32px 16px;
+        flex-direction: column;
+        gap:32px;
+        text-align: center;
+    }
+    .privilages__table-row .text-1{
+        font-size: 20px;
+        line-height: 24px;
+        font-weight: 500;
+    }
+    .privilages__table-row .text-2{
+        color:#DFD9D3;
+        font-size: 16px;
+        width: 226px;
+        line-height: 20px;
+    }
+}
 /*order*/
 .order__inner{
 justify-content: center;
