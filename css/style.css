@@ -330,6 +330,11 @@ a{
 .main section{
     width: 100%;
 }
+@media (max-width:1199px){
+    .main{
+        gap:80px;
+    }
+}
 /*privilages*/
 .privilages{
     padding:64px 0 0;
@@ -390,6 +395,7 @@ a{
         width: 226px;
         line-height: 20px;
     }
+    
 }
 /*order*/
 .order__inner{
@@ -403,6 +409,7 @@ justify-content: center;
     text-transform: uppercase;
 }
 .order__title span, .garanty__title span{
+    line-height: 52px;
     color:#3D3D3D;
 }
 .order__items{
@@ -432,6 +439,41 @@ justify-content: center;
     color:#818181;
     text-align: center;
     margin-top: 8px;
+}
+@media(max-width:1199px){
+    .order__title span{
+        font-size: 32px;
+        line-height: 41px;
+    }
+    .order__title{
+        font-size: 32px;
+        line-height: 41px;
+    }
+    .order__items .container{
+        flex-direction: column;
+        align-items: center;
+        gap:48px;
+    }
+    .order__items{
+    height: 947px;
+        background: url('../images/order-mob.png') no-repeat;
+        background-position-x: 0%;
+        background-position-y: 0%;
+        background-size: auto;
+        background-position-x: center;
+        background-position-y: bottom;
+        background-size: contain;
+    }
+    .order__item-icon{
+        width: 50%;
+    }
+    .order__item-title{
+        font-size: 18px;
+        margin-top: 16px;
+    }
+    .order-item{
+        width: 66%;
+    }
 }
 /*catalog*/
 .catalog__text-title{
@@ -536,6 +578,7 @@ justify-content: center;
 .qa__intro{
     position: relative;
     height: 584px;
+    width: 423px;
 }
 .qa__intro-block{
     width: 300px;
@@ -581,6 +624,9 @@ justify-content: center;
     align-items: center;
     width: 40.5%;
     gap:24px
+}
+.exp__row-image{
+    width: 50%;
 }
 .exp__item-title{
     font-size: 32px;
