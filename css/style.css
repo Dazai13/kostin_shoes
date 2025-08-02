@@ -746,10 +746,94 @@ background: linear-gradient(180deg, #161414, #242323);
 .garanty-item{
     width:18%
 }
+/*contact*/
 .contact{
     background: url(../images/contact.png) no-repeat center;
     background-size: cover;
     height: 810px;
+}
+.contact__inner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 171px 0;
+    width: 100%;
+}
+.contact-line{
+    margin:32px 0;
+    background: #818181;
+    width: 100px;
+    height: 1px;
+}
+.contact__btn{
+    background: #E89900;
+    color:#101010;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 16px 32px;
+    border: none;
+    margin:112px 0;
+}
+.contact__btn:hover{
+    background: var(--yellow);
+    transition: all .3s;
+}
+.contact__social{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap:80px;
+    width: 826px;
+    margin-right: 88px;
+}
+.contact__social-item{
+    display: flex;
+    flex-direction: row;
+    gap:8px;
+    padding: 8px 41px;
+    align-items: center;
+}
+.contact__social-icon{
+    color:white;
+    width: 24px;
+    height: 24px;
+}
+.contact__social-item:hover .contact__social-icon, .contact__social-item:hover .contact__social-text{
+    color:#E89900;
+    transition: all .3s;
+}
+@media (max-width:1199px){
+    .contact{
+        background: url('../images/contact-mob.png')no-repeat center;
+        height: 448px;
+        background-size: cover;
+    }
+    .contact__inner{
+        padding: 48px 0;
+    }
+    .contact__title{
+        font-size: 32px;
+        line-height: 41px;
+        text-align: center;
+    }
+    .contact-line{
+        margin:16px 0;
+    }
+    .contact__subtitle{
+        text-align: center;
+        font-size: 18px;
+    }
+    .contact__btn{
+        display: none;
+    }
+    .contact__social{
+        flex-direction: column;
+        width: 100%;
+        margin:0;
+        gap:8px;
+        align-items: center;
+        margin-top:48px;
+    }
 }
 /*phone call*/
 .phone__call{
