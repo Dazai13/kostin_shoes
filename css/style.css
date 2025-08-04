@@ -25,6 +25,7 @@
 body{
     background: var(--black);
     font-family: 'Montserrat', sans-serif;
+    user-select: none;
 }
 body.no-scroll {
     overflow: hidden;
@@ -849,6 +850,7 @@ top: 0;
     width: 15px;
     user-select: none;
     height: 14px;
+    color:var(--gold)
 }
 .comment-slider__btn{
     position: absolute;
@@ -1501,7 +1503,7 @@ width: 18px;
     }
 }
 /*popup__form*/
-.popup__form{
+.popup__form,.popup__comment{
     position: fixed;
     z-index: 9999;
     width: 100vw;
@@ -1511,7 +1513,7 @@ width: 18px;
     background: rgba(0,0,0,0.5);
     top:-100%
 }
-.popup__form.active{
+.popup__form.active,.popup__comment.active{
     opacity: 1;
     top:0;
 }
@@ -1525,23 +1527,48 @@ width: 18px;
   transform: translateX(-50%) translateY(-50%);
   padding: 16px;
 }
-.form__popup-close{
+
+.popup__comment-content{
+        background: #181616;
+  width: 1057px;
+  height: 792px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  padding: 16px;
+}
+.form__popup-close,.popup__comment-close{
     width: 100%;
     border: 1px solid rgba(61, 61, 61, 0.80);
     padding: 4px;
     display: flex;
     justify-content: end;
 }
-.form__popup-icon{
+.form__popup-icon,.popup__comment-icon{
     width: 12px;
     height: 12px;
     cursor: pointer;
 }
-.form__popup-items{
+.form__popup-items,.popup__comment-items{
     padding: 32px 48px 48px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+.popup__comment-image{
+    width: 169px;
+    margin:64px 0;
+}
+.popup__comment-item{
+    width: 423px;
+}
+.popup__comment-input{
+    margin-bottom: 8px;
+}
+textarea{
+    height: 100px;
+    resize: none;
 }
 .form__popup-item{
     max-width: 372px;
@@ -1576,6 +1603,43 @@ width: 18px;
     background: var(--yellow);
     transition: all .3s ease;
 }
+.rating-text{
+    font-weight: 500;
+}
+.rating-block{
+    display: flex;
+    flex-direction: row;
+    gap:16px;
+    margin-bottom: 32px;
+}
+.popup__comment-item .form__popup-btn{
+    margin-top: 24px;
+}
+.popup__comment-item .stars {
+  display: flex;
+  gap: 4px;
+}
+
+.popup__comment-item .star-icon {
+  stroke-width: 1px;
+  stroke: #fff;
+  color: transparent;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+/* Звезды с активным рейтингом */
+.popup__comment-item .star-icon.active {
+  stroke-width: 0;
+  color: var(--gold);
+}
+
+/* Состояние при наведении */
+.popup__comment-item .star-icon.hovered {
+  stroke-width: 0;
+  color: var(--gold);
+}
+
 @media (max-width:1199px){
     .popup__form-content{
         width: 343px;
@@ -1600,6 +1664,7 @@ width: 18px;
         font-size: 32px;
         line-height: 41px;
         text-align: center;
+        margin-top: 16px;
     }
     .form__popup-logo{
         margin: 64px 0;
@@ -1611,6 +1676,44 @@ width: 18px;
     .checkbox__container label{
         font-size: 14px;
         line-height: 17px
+    }
+    .popup__comment-content{
+        width: 343px;
+        height: 668px;
+    }
+    .popup__comment-image{
+        width: 125px;
+        margin:48px 0;
+    }
+    .popup__comment-item{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .rating-text{
+        display: none;
+    }
+    .popup__comment-item .star-icon{
+        width: 15px;
+        height: 15px;
+        transform: scale(1.5);
+    }
+    .rating-block{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .popup__comment-item .stars{
+        width: 132px;
+                display: flex;
+        justify-content: space-between;
+    }
+    .popup__comment-items{
+        padding: 0;
+    }
+    .popup__comment-item .input{
+        font-size:14px;
     }
 }
 /*phone call*/

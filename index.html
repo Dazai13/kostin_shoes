@@ -645,6 +645,32 @@
             </div>
         </div>
     </div>
+    <div class="popup__comment">
+        <div class="popup__comment-content">
+            <div class="popup__comment-close"><svg class="popup__comment-icon"><use xlink:href="images/sprite.svg#close_popup"></use></svg></div>
+            <div class="popup__comment-items">
+                <div class="form__popup-image"><img src="images/popup-comment.png" alt=""></div>
+                <form action="" class="popup__comment-item">
+                    <h3 class="form__popup-title">ваш опыт</h3>
+                    <img src="images/menu-logo.png" alt="" class="popup__comment-image">
+                    <div class="rating-block">
+                        <p class="rating-text text-4">Ваш рейтинг:</p>
+                        <div class="stars">            
+                            <svg class="star-icon" data-rating="1"><use xlink:href='images/sprite.svg#star'></use></svg>
+                            <svg class="star-icon" data-rating="2"><use xlink:href='images/sprite.svg#star'></use></svg>
+                            <svg class="star-icon" data-rating="3"><use xlink:href='images/sprite.svg#star'></use></svg>
+                            <svg class="star-icon" data-rating="4"><use xlink:href='images/sprite.svg#star'></use></svg>
+                            <svg class="star-icon" data-rating="5"><use xlink:href='images/sprite.svg#star'></use></svg>
+                        </div>
+                    </div>
+                    <input id="name" type="text" class="popup__comment-input input" placeholder="Ваше имя">
+                    <input id="prof" type="text" class="popup__comment-input input" placeholder="Чем занимаетесь?">
+                    <textarea id="text" type="text" class="popup__comment-input input" placeholder="Расскажите о качестве обуви и Вашем опыте сотрудничества с нами."></textarea>
+                    <button class="form__popup-btn btn">Оставить заявку</button>
+                </form>
+            </div>
+        </div>
+    </div>
     <div id="phone-btn" class="phone__call"><svg class="phone__call-icon"><use xlink:href="images/sprite.svg#phone_call"></use></svg></div>
     <div id="phone-popup" class="phone__call-popup">
         <div class="phone__popup-content">
@@ -663,6 +689,7 @@
     <script src="js/accordion.js"></script>
     <script src="js/phone_popup.js"></script>
     <script src="js/popup_form.js"></script>
+    <script src="js/comment.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" type="text/javascript"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery.maskedinput@1.4.1/src/jquery.maskedinput.min.js" type="text/javascript"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
