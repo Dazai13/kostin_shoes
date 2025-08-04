@@ -729,6 +729,103 @@ background: linear-gradient(180deg, #161414, #242323);
     right: 0;
     z-index: 1;
 }
+/*gallery*/
+.gallery__intro{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.gallery-text{
+    color:#DFD9D3;
+    text-align: end;
+    width: 468px;
+}
+.gallery__items{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap:32px 0;
+    margin-top: 64px;
+}
+.gallery-item{
+    width: 30.8%;
+    height: 100%;
+}
+.gallery-item:first-child{
+    width: 66.4%;
+}
+.gallery-item:last-child{
+    width: 100%;
+}
+.gallery__item-block{
+    width: 30%;
+}
+.gallery__block-item{
+    width: 100%;
+}
+.gallery__items picture{
+    width: 66.4%;
+}
+.gallery__text-link{
+    display: flex;
+    flex-direction: row;
+    gap:8px;
+    align-items: center;
+    margin-top: 16px;
+}
+.gallery__number-icon{
+    width: 15px;
+    height: 15px;
+    color:white;
+}
+.gallery__link{
+    text-transform: uppercase;
+    text-decoration: underline;
+    font-weight: 500;
+}
+.gallery__text-link:hover .gallery__link, .gallery__text-link:hover .gallery__number-icon{
+    color:var(--gold);
+    transition: all .3s;
+}
+@media (max-width:1199px){
+    .gallery__intro{
+        flex-direction: column;
+    }
+    .gallery-title{
+        font-size:32px;
+        line-height: 41px;
+        text-align: center;
+    }
+    .gallery-text{
+        font-size:16px;
+        line-height: 20px;
+        text-align: center;
+        width: 100%;
+        margin-top: 16px;
+    }
+    .gallery__items{
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        gap:16px;
+        margin-top: 48px;
+    }
+    .gallery-item:first-child{
+        display: none;
+    }
+    .gallery__item-block{
+        width: 100%;
+        order: 3;
+    }
+    .gallery__items picture{
+        width: 100%;
+        order:1;
+    }
+    .gallery-item{
+        order:2;    
+        width: 100%;
+    }
+}
 /*exp*/
 .exp__title{
     text-align: center;
@@ -1113,16 +1210,17 @@ background: linear-gradient(180deg, #161414, #242323);
     z-index: 9999;
     bottom:-100%;
     right:0;
-    top:inherit;
     width: 333px;
     height: 100vh;
     background: rgba(13,13,13,.95);
-    transition: all 1.3s ease;
+    transition: all .3s ease;
     padding: 32px;
+    opacity: 0;
 }
 .phone__call-popup.active{
-    top:0;
-    bottom:inherit;
+    opacity: 1;
+    transition: all .3s ease;
+    bottom:0;
 }
 .phone__close-icon{
     width: 13px;
