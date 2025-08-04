@@ -688,12 +688,21 @@ background: linear-gradient(180deg, #161414, #242323);
     background: #181616;
     border:1px solid rgba(129, 129, 129, 0.60);
 }
-
+@media (max-width:1199px){
+    .about{
+background: 
+        linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), /* Чёрный слой с прозрачностью 90% */
+        url(../images/about.png) no-repeat center;
+    background-size: cover;
+    height: auto;
+    }
+}
 /*qa*/
 .qa__inner{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    gap: 13%;
 }
 .qa__inner-intro{
     width: 34.12%;
@@ -701,9 +710,12 @@ background: linear-gradient(180deg, #161414, #242323);
     flex-direction: column;
     gap:64px;
 }
+.qa__title{
+    width: 420px;
+}
 .qa__title span{
     color:#3D3D3D;
-    font-size: 24pxw;
+    font-size: 24px;
 }
 .qa__intro{
     position: relative;
@@ -728,6 +740,147 @@ background: linear-gradient(180deg, #161414, #242323);
     top:0;
     right: 0;
     z-index: 1;
+}
+.accordion-icon{
+width: 18px;
+  height: 12px;
+    color:white;
+    rotate:90deg;
+    stroke-width: 2px;
+}
+.accordion-title{
+    font-weight: 400;
+}
+.accordion-header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 0;
+    cursor: pointer;
+    user-select: none;
+    gap:10px;
+}
+.accordion{
+    max-width: 697px;
+    width: 100%;
+    border-top:1px solid rgba(61, 61, 61, 0.40)
+}
+.accordion-container{
+    height: auto;
+    border-bottom:1px solid rgba(61, 61, 61, 0.40);
+}
+.accordion-header:hover .accordion-icon, .accordion-header:hover .accordion-title{
+    color:#E89900;
+    transition: all .3s;
+}
+.accordion__body-text{
+    color:#818181;
+}
+.accordion-body{
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all .3s;
+}
+.accordion-body.active{
+    opacity: 1;
+    max-height: 500px;
+    transition: all .3s;;
+    padding: 16px 0 24px;
+}
+.accoridon__contact{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.accordion__contact-text{
+    font-weight: 400;
+}
+.accrodion__contact-btn{
+    padding: 24px 32px;
+    border: 1px solid rgba(61, 61, 61, 0.40);
+    background: none;
+    display: flex;
+    flex-direction: row;
+    gap:16px;
+    align-items: center;
+}
+.accrodion__contact-btn:hover{
+    transition: all .3s;
+    background: #181616;
+    border:1px solid rgba(129,129,129,.6)
+}
+.accordion__btn-icon{
+    rotate: 45deg;
+    color:white;
+    width: 15px;
+    height: 12px;
+    stroke-width: 2px;
+    }
+@media (max-width:1199px){
+    .qa__inner{
+        flex-direction: column;
+        gap:48px;
+    }
+    .qa__inner-intro,.qa__title{
+        width: 100%;
+    }
+    .qa__title{
+        font-size:24px;
+        text-align: center;
+    }
+    .qa__title span{
+        font-size: 20px;
+    }
+    .qa__intro{
+        display: none;
+    }
+    .accordion-icon{
+        stroke-width: 1px;
+
+    }
+    .accordion-title{
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 20px;
+    }
+    .accordion__body-text{
+        font-size:16px;
+        font-weight: 400;
+    }
+    .accordion__contact-text{
+        font-size:16px;
+        font-weight: 700;
+    }
+    .accordion__btn-icon{
+        display: none;
+    }
+    .accordion__btn-title{
+        font-size: 16px;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+    .accrodion__contact-btn{
+        padding: 0;
+        border:none;
+    }
+    .accoridon__contact{
+        padding: 24px 0;
+        border-bottom: 1px solid rgba(61, 61, 61, 0.40);
+    }
+    .accrodion__contact-btn:hover{
+        border:none;
+        background: none;
+        transition: all .3s;
+    }
+    .accrodion__contact-btn:hover .accordion__btn-title{
+        color:#E89900;
+        transition: all .3s;
+    }
+    
 }
 /*gallery*/
 .gallery__intro{
