@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="css/style.css">
     <!-- Add the slick-theme.css if you want default styling -->
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-<!-- Add the slick-theme.css if you want default styling -->
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
     <title>Kostin Shoes</title>
 </head>
@@ -15,13 +14,13 @@
         <div class="container">
             <div class="header__inner inner">
                 <nav class="header__nav">
-                    <a href="" class="header__nav-link link text-3">Коллекция</a>
-                    <a href="" class="header__nav-link link text-3">Преимущества</a>
-                    <a href="" class="header__nav-link link text-3">Отзывы</a>
+                    <a data-target="catalog"class="header__nav-link link text-3">Коллекция</a>
+                    <a data-target="privilages" class="header__nav-link link text-3">Преимущества</a>
+                    <a data-target="comment" class="header__nav-link link text-3">Отзывы</a>
                 </nav>
                 <img src="images/logo.png" alt="" class="header__logo">
                 <div class="header__contact">
-                    <a class="header__contact-number link">
+                    <a href="tel:+79991234567" class="header__contact-number link">
                         <svg class="header__number-icon"><use xlink:href="images/sprite.svg#phone"></use></svg>
                         <p class="header__number-text text-4">+ 7 (999) 123-45-67</p>
                     </a>
@@ -42,34 +41,34 @@
                         <img src="images/menu-logo.png" alt="">
                     </div>
                     <nav class="menu__nav menu__content-item">
-                        <a href="" class="menu__nav-link link text-4">Коллекция</a>
-                        <a href="" class="menu__nav-link link text-4">Преимущества</a>
-                        <a href="" class="menu__nav-link link text-4">Галерея</a>
-                        <a href="" class="menu__nav-link link text-4">Вопрос-ответ</a>
-                        <a href="" class="menu__nav-link link text-4">Отзывы</a>
-                        <a href="" class="menu__nav-link link text-4">Гарантия</a>
+                        <a data-target="catalog" class="menu__nav-link link text-4">Коллекция</a>
+                        <a data-target="privilages" class="menu__nav-link link text-4">Преимущества</a>
+                        <a data-target="gallery" class="menu__nav-link link text-4">Галерея</a>
+                        <a data-target="qa" class="menu__nav-link link text-4">Вопрос-ответ</a>
+                        <a data-target="comment" class="menu__nav-link link text-4">Отзывы</a>
+                        <a data-target="garanty" class="menu__nav-link link text-4">Гарантия</a>
                     </nav>
                     <div class="menu__social menu__content-item">
-                        <div class="menu__social-item">
+                        <a href="tel:+79991234567" class="menu__social-item">
                             <svg class="menu__social-icon"><use xlink:href='images/sprite.svg#phone'></use></svg>
                             <p class="menu__social-text text-4">+ 7 (999) 123-45-67</p>
-                        </div>
-                        <div class="menu__social-item">
+                        </a>
+                        <a href="https://wa.me/79223636474" class="menu__social-item">
                             <svg class="menu__social-icon"><use xlink:href='images/sprite.svg#whatsapp'></use></svg>
                             <p class="menu__social-text text-4">WhatsApp</p>
-                        </div>
-                        <div class="menu__social-item">
+                        </a>
+                        <a href='https://t.me/koster90' class="menu__social-item">
                             <svg class="menu__social-icon"><use xlink:href='images/sprite.svg#telegram'></use></svg>
                             <p class="menu__social-text text-4">Telegram</p>
-                        </div>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
         <div class="menu__scroll">
-            <svg class="menu__social-icon"><use xlink:href='images/sprite.svg#phone'></use></svg>
-            <svg class="menu__social-icon"><use xlink:href='images/sprite.svg#whatsapp'></use></svg>
-            <svg class="menu__social-icon"><use xlink:href='images/sprite.svg#telegram'></use></svg>
+            <a href="tel:+79991234567"><svg class="menu__social-icon"><use xlink:href='images/sprite.svg#phone'></use></svg></a>
+            <a href="https://wa.me/79223636474"><svg class="menu__social-icon"><use xlink:href='images/sprite.svg#whatsapp'></use></svg></a>  
+            <a href='https://t.me/koster90'><svg class="menu__social-icon"><use xlink:href='images/sprite.svg#telegram'></use></svg></a>
             <svg id="burger" class="header__burger"><use xlink:href="images/sprite.svg#burger"></use></svg>
         </div>
     </section>
@@ -82,7 +81,7 @@
         </div>
     </section>
     <main class="main">
-        <section class="privilages">
+        <section id="privilages" class="privilages">
             <div class="privilages__inner inner">
                 <div class="container">
                     <h5 class="privilages__title">
@@ -152,7 +151,7 @@
                 </div>
             </div>
         </section>
-        <section class="catalog">
+        <section id='catalog' class="catalog">
             <div class="container">
                 <div class="catalog__inner inner">
                     <div class="catalog__text">
@@ -312,7 +311,7 @@
                 </div>
             </div>
         </section>
-        <section class="comment">
+        <section id='comment' class="comment">
             <div class="comment__inner">
                 <div class="comment__title">
                     <div class="line-with-circle"></div>
@@ -423,7 +422,7 @@
                 </div>
             </div>
         </section>
-        <section class="qa">
+        <section id="qa" class="qa">
             <div class="container">
                 <div class="qa__inner">
                     <div class="qa__inner-intro">
@@ -475,7 +474,7 @@
                 </div>
             </div>
         </section>
-        <section class="gallery">
+        <section id="gallery" class="gallery">
             <div class="container">
                 <div class="gallery__inner">
                     <div class="gallery__intro">
@@ -530,7 +529,7 @@
                 </div>
             </div>
         </section>
-        <section class="garanty">
+        <section id="garanty" class="garanty">
             <div class="container">
                 <div class="garanty__inner inner">
                     <h3 class="garanty__title"><span>наша забота</span><br>больше, чем просто гарантия</h3>
@@ -567,18 +566,18 @@
                     <p class="contact__subtitle text-5">Попробуйте без риска - и уже не захотите возвращаться к обычной обуви</p>
                     <button class="contact__btn btn request-popup">Оставить заявку</button>
                     <div class="contact__social">
-                        <div class="contact__social-item btn">
+                        <a href="tel:+79991234567" class="contact__social-item btn">
                             <svg class="contact__social-icon"><use xlink:href='images/sprite.svg#phone'></use></svg>
                             <p class="contact__social-text text-4">+ 7 (999) 123-45-67</p>
-                        </div>
-                        <div class="contact__social-item btn">
+                        </a>
+                        <a href='https://wa.me/79223636474' class="contact__social-item btn">
                             <svg class="contact__social-icon"><use xlink:href='images/sprite.svg#whatsapp'></use></svg>
                             <p class="contact__social-text text-4">WhatsApp</p>
-                        </div>
-                        <div class="contact__social-item btn">
+                        </a>
+                        <a href="https://t.me/koster90" class="contact__social-item btn">
                             <svg class="contact__social-icon "><use xlink:href='images/sprite.svg#telegram'></use></svg>
                             <p class="contact__social-text text-4">Telegram</p>
-                        </div>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -594,12 +593,16 @@
                         <p class="footer__logo-text text-4">Онлайн-замеры. Быстрый пошив. Гарантия результата.</p>
                     </div>
                     <div class="footer__contact">
-                        <p class="text-4">kostinshoes@mail.ru</p>
-                        <p class="text-4">+ 7 (999) 123-45-67</p>
+                        <p class="text-4">
+                            <a href="mailto:kostinshoes@mail.ru">kostinshoes@mail.ru</a>
+                        </p>
+                        <p class="text-4">
+                            <a href="tel:+79991234567">+ 7 (999) 123-45-67</a>
+                        </p>
                         <div class="footer__contact-social">
-                            <svg class="footer__social-icon"><use xlink:href="images/sprite.svg#phone"></use></svg>
-                            <svg class="footer__social-icon"><use xlink:href='images/sprite.svg#telegram'></use></svg>
-                            <svg class="footer__social-icon"><use xlink:href='images/sprite.svg#whatsapp'></use></svg>
+                            <a href="tel:+79991234567"><svg class="footer__social-icon"><use xlink:href="images/sprite.svg#phone"></use></svg></a>
+                            <a href="https://t.me/koster90"><svg class="footer__social-icon"><use xlink:href='images/sprite.svg#telegram'></use></svg></a>
+                            <a href="https://wa.me/79223636474"><svg class="footer__social-icon"><use xlink:href='images/sprite.svg#whatsapp'></use></svg></a>
                         </div>
                     </div>
                     <div class="footer__about">
@@ -609,12 +612,12 @@
                     </div>
                     <nav class="footer__nav">
                         <p class="footer__nav-title text-2">Клиентам</p>
-                        <a class="footer__nav-text text-4">Коллекция</a>
-                        <a class="footer__nav-text text-4">Преимущества</a>
-                        <a class="footer__nav-text text-4">Галерея</a>
-                        <a class="footer__nav-text text-4">Отзывы</a>
-                        <a class="footer__nav-text text-4">Вопрос-ответ</a>
-                        <a class="footer__nav-text text-4">Гарантия</a>
+                        <a data-target="catalog" class="footer__nav-text text-4">Коллекция</a>
+                        <a data-target="privilages" class="footer__nav-text text-4">Преимущества</a>
+                        <a data-target="gallery" class="footer__nav-text text-4">Галерея</a>
+                        <a data-target="comment" class="footer__nav-text text-4">Отзывы</a>
+                        <a data-target="qa" class="footer__nav-text text-4">Вопрос-ответ</a>
+                        <a data-target="garanty" class="footer__nav-text text-4">Гарантия</a>
                     </nav>
                 </div>
                 <div class="footer__under">
@@ -690,6 +693,8 @@
     <script src="js/phone_popup.js"></script>
     <script src="js/popup_form.js"></script>
     <script src="js/comment.js"></script>
+    <script src="js/star.js"></script>
+    <script src="js/target.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" type="text/javascript"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery.maskedinput@1.4.1/src/jquery.maskedinput.min.js" type="text/javascript"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>

@@ -1511,7 +1511,7 @@ width: 18px;
     opacity: 0;
     transition: all .3s;
     background: rgba(0,0,0,0.5);
-    top:-100%
+    top:-150%
 }
 .popup__form.active,.popup__comment.active{
     opacity: 1;
