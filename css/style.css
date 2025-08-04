@@ -777,6 +777,37 @@ background: linear-gradient(180deg, #161414, #242323);
     background: #3D3D3D;
     height: 1px;
 }
+@media (max-width:1199px){
+    .exp__row-image{
+        display: none;
+    }
+    .exp__row-item{
+        width: 100%;
+    }
+    .exp__content{
+        gap:48px;
+    }
+    .exp__item-text{
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .exp__item-title{
+        font-size: 24px;
+        line-height: 29px;
+        font-weight: 500;
+    }
+    .exp__title{
+        margin: 0 0 48px;
+        font-size: 32px;
+        line-height: 37px;   
+    }
+    .exp__title span{
+        font-size: 20px;
+        line-height: 26px;
+        font-weight: 400;
+    }
+}
 /*garanty*/
 .garanty__inner{
     flex-direction: column;
@@ -784,6 +815,72 @@ background: linear-gradient(180deg, #161414, #242323);
 }
 .garanty-item{
     width:18%
+}
+.garanty-icon{
+    color:var(--white);
+    width: 60px;
+  height: 70px;
+}
+.garanty-item:nth-child(1) .garanty-icon{
+    width: 59px;
+    height: 67px;
+}
+.garanty-item:nth-child(2) .garanty-icon{
+    width: 67px;
+    height: 67px;
+}
+.garanty-item:nth-child(3) .garanty-icon{
+    width: 53px;
+    height: 67px;
+}
+.garanty-item:nth-child(4) .garanty-icon{
+    width: 56px;
+    height: 67px;
+}
+@media (max-width:1199px){
+    .garanty__title{
+        font-size: 32px;
+    }
+    .garanty__items{
+        flex-direction: column;
+        margin-top: 48px;
+        gap:32px;
+    }
+    .garanty-item{
+        width: 100%;
+        display: grid;
+        grid-template-columns: auto 1fr;
+        align-items: center;
+        gap: 0 32px;
+    }
+  .garanty__item-title,
+  .garanty__item-text {
+    grid-column: 2;
+    margin: 0;
+  }
+
+  .garanty-icon {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    scale: 0.6;
+   color:#E89900; 
+   width: 67px !important;
+   height: 66px !important
+  }
+  .garanty__item-title{
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 8px;
+  }
+  .garanty__item-text{
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 500;
+    text-align: start;
+  }
+  .garanty-item:nth-child(1) .garanty__item-text{
+    margin-top:-20px
+  }
 }
 /*contact*/
 .contact{
