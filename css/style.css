@@ -814,6 +814,13 @@ top: 0;
     max-width: 1240px;
     width: 100%;
 }
+.comment__slide-image{
+    width: 206px;
+  height: 206px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top;
+}
 .comment__slide-prof,.comment__slide-date{
     font-weight: 500;
     color:#818181;
