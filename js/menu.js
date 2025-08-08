@@ -1,20 +1,41 @@
 document.addEventListener('DOMContentLoaded', function() {
-  const menuToggle = document.getElementById('burger');
+  const openBurger = document.querySelector('.header__burger'); // Открывает меню
+  const closeBurger = document.querySelector('.menu__burger'); // Закрывает меню
   const menuWindow = document.getElementById('menu');
   const menuClose = document.getElementById('close');
-  if (!menuToggle || !menuWindow || !menuClose) return;
-  menuToggle.addEventListener('click', function() {
-    menuWindow.classList.toggle('active');
-    document.body.classList.toggle('menu-open');
+  
+  if (!openBurger || !closeBurger || !menuWindow || !menuClose) return;
+  
+  // Открытие меню по .header__burger
+  openBurger.addEventListener('click', function() {
+    menuWindow.classList.add('active');
+    document.body.classList.add('menu-open');
   });
+  
+  // Закрытие меню по .menu__burger
+  closeBurger.addEventListener('click', function() {
+    menuWindow.classList.remove('active');
+    document.body.classList.remove('menu-open');
+    
+    // Скрываем menu-scroll (если он есть)
+    const menuScroll = document.querySelector('.menu__scroll');
+    if (menuScroll) {
+      menuScroll.style.display = 'none';
+    }
+  });
+  
+  // Закрытие меню по крестику (если нужно)
   menuClose.addEventListener('click', function() {
     menuWindow.classList.remove('active');
     document.body.classList.remove('menu-open');
   });
+  
+  // Остальная логика (прокрутка, ссылки и т. д.)
   const menuSection = document.getElementById('menu');
   const menuContainer = menuSection.querySelector('.container');
   const menuScroll = menuSection.querySelector('.menu__scroll');
   const menuLinks = document.querySelectorAll('#menu a');
+  
   if (menuContainer && menuScroll) {
     menuContainer.style.display = 'none';
     menuScroll.style.display = 'none';
@@ -23,7 +44,9 @@ document.addEventListener('DOMContentLoaded', function() {
     menuScroll.style.left = '0';
     menuScroll.style.width = '100%';
     menuScroll.style.zIndex = '1000';
+    
     let isMenuOpen = false;
+    
     function openMenu() {
       menuContainer.style.display = 'block';
       menuScroll.style.display = 'none';
@@ -33,6 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
       isMenuOpen = true;
       document.body.classList.add('menu-open');
     }
+    
     function closeMenu() {
       menuContainer.style.opacity = '0';
       setTimeout(() => {
@@ -42,6 +66,7 @@ document.addEventListener('DOMContentLoaded', function() {
       isMenuOpen = false;
       document.body.classList.remove('menu-open');
     }
+    
     function checkMenuPosition() {
       if (!isMenuOpen) return;
       const menuRect = menuSection.getBoundingClientRect();
@@ -51,15 +76,18 @@ document.addEventListener('DOMContentLoaded', function() {
         menuScroll.style.display = 'none';
       }
     }
+    
     window.addEventListener('scroll', checkMenuPosition);
-    menuToggle.addEventListener('click', function() {
+    
+    openBurger.addEventListener('click', function() {
       if (!isMenuOpen) {
         openMenu();
-      } else {
-        closeMenu();
       }
     });
+    
+    closeBurger.addEventListener('click', closeMenu);
     menuClose.addEventListener('click', closeMenu);
+    
     if (menuLinks) {
       menuLinks.forEach(link => {
         link.addEventListener('click', function(e) {
@@ -74,6 +102,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
       });
     }
+    
     if (menuScroll) {
       const scrollLinks = menuScroll.querySelectorAll('a');
       if (scrollLinks) {
@@ -85,4 +114,32 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     }
   }
+});
+jQuery(document).ready(function($) {
+    $('.accordion-header').on('click', function() {
+        var $content = $(this).next('.accordion-content');
+        var isActive = $content.hasClass('active');
+        
+        // Закрываем все открытые аккордеоны
+        $('.accordion-content.active').not($content).removeClass('active')
+            .prev('.accordion-header').css({
+                'padding': '24px 0 24px',
+                'transition': 'all .3s'
+            });
+        
+        // Переключаем текущий аккордеон
+        $content.toggleClass('active');
+        
+        if ($content.hasClass('active')) {
+            $(this).css({
+                'padding': '24px 0 0',
+                'transition': 'all .3s'
+            });
+        } else {
+            $(this).css({
+                'padding': '24px 0 24px',
+                'transition': 'all .3s'
+            });
+        }
+    });
 });

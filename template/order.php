@@ -33,7 +33,7 @@
                         <img src="<?php echo get_template_directory_uri();?>/images/order__icon-4.png" alt="">
                     </picture>
                     <p class="order__item-title text-2">Получение</p>
-                    <p class="order__item-text text-4">Доставляем в ваш пункт Озон  или курьером</p>
+                    <p class="order__item-text text-4">Доставляем в ваш пункт Озон или курьером</p>
                 </div>
             </div>
         </div>

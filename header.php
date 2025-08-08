@@ -66,6 +66,6 @@
             <a href="tel:+79991234567"><svg class="menu__social-icon"><use xlink:href='<?php echo get_template_directory_uri();?>/images/sprite.svg#phone'></use></svg></a>
             <a href="https://wa.me/79223636474"><svg class="menu__social-icon"><use xlink:href='<?php echo get_template_directory_uri();?>/images/sprite.svg#whatsapp'></use></svg></a>  
             <a href='https://t.me/koster90'><svg class="menu__social-icon"><use xlink:href='<?php echo get_template_directory_uri();?>/images/sprite.svg#telegram'></use></svg></a>
-            <svg id="burger" class="menu__burger"><use xlink:href="<?php echo get_template_directory_uri();?>/images/sprite.svg#burger"></use></svg>
+            <svg class="menu__burger"><use xlink:href="<?php echo get_template_directory_uri();?>/images/sprite.svg#burger"></use></svg>
         </div>
     </section>

@@ -42,6 +42,7 @@
             </div>
         </div>
     </footer>
+    <?php include(locate_template('template/card-popup.php'));?>
     <?php include(locate_template('template/popup__form.php'));?>
     <?php include(locate_template('template/popup__comment.php'));?>
     <?php include(locate_template('template/popup__phone.php'));?>

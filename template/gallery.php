@@ -9,7 +9,7 @@
                 <img src="<?php echo get_template_directory_uri();?>/images/gallery-item-1.png" alt="" class="gallery-item">
                 <div class="gallery__item-block">
                     <img src="<?php echo get_template_directory_uri();?>/images/gallery-item-2.png" alt="" class="gallery__block-item">
-                    <div class="gallery__text-link link"><p class="gallery__link text-3">посмотреть модели</p><svg class="gallery__number-icon"><use xlink:href="<?php echo get_template_directory_uri();?>/images/sprite.svg#arrow"></use></svg></div>
+                    <a data-target="catalog" class="gallery__text-link link"><p class="gallery__link text-3">посмотреть модели</p><svg class="gallery__number-icon"><use xlink:href="<?php echo get_template_directory_uri();?>/images/sprite.svg#arrow"></use></svg></a>
                 </div>
                 <img src="<?php echo get_template_directory_uri();?>/images/popup-form.png" alt="" class="gallery-item">    
                 <picture>
